@@ -5,6 +5,27 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+// load loopback-jwt module 
+var auth = require('loopback-jwt')(app,{
+    secretKey: 'secret',
+    model: 'User'
+});
+ 
+// apply to a path 
+app.use('/events',auth.authenticated,function(req,res,next) {
+    debug("has valid token",req.user);
+    next();
+});
+ 
+// catch error 
+app.use(function (err, req, res, next) {
+    if (err.name === 'UnauthorizedError') {
+        res.status(401).send('invalid token, or no token supplied');
+    } else {
+        res.status(401).send(err);
+    }
+});
+
 app.start = function() {
   // start the web server
   return app.listen(function() {
