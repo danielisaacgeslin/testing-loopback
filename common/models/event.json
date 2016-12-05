@@ -1,0 +1,44 @@
+{
+  "name": "event",
+  "plural": "events",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "dateTime": {
+      "type": "date",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "speaker": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "default": "undefined.png"
+    },
+    "topic": {
+      "type": [
+        "string"
+      ]
+    },
+    "discussions": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

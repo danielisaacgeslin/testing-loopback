@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo-db-testing-loopback": {
+    "host": "ds119748.mlab.com",
+    "port": 19748,
+    "url": "mongodb://testing:123456@ds119748.mlab.com:19748/testing-loopback",
+    "database": "testing-loopback",
+    "password": "123456",
+    "name": "mongo-db-testing-loopback",
+    "user": "testing",
+    "connector": "mongodb"
+  }
+}
