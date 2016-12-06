@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-cloak>
+    <head>
+        <base href="/">
+        <meta charset="UTF-8">
+        <title></title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="js/vendors.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div ui-view></div>
+        <!-- inject:js -->
+        <script src="/app/app.module.js"></script>
+        <script src="/app/home/app.main.module.js"></script>
+        <script src="/app/core/app.core.module.js"></script>
+        <script src="/app/login/app.login.module.js"></script>
+        <script src="/app/home/controllers/main.controller.js"></script>
+        <script src="/app/home/controllers/second.controller.js"></script>
+        <script src="/app/login/controllers/login.controller.js"></script>
+        <script src="/app/login/services/login.service.js"></script>
+        <!-- endinject -->
+    </body>
+</html>
